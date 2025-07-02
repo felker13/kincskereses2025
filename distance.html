@@ -60,7 +60,12 @@
         error => {
           resultDiv.textContent = 'Helymeghatározási hiba: ' + error.message;
           resultDiv.style.color = 'red';
-        }
+        },
+              {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+              }
       );
     }
 
