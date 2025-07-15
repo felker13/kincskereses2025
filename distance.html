@@ -10,12 +10,11 @@
 </head>
 <body>
   <h1>Élő távolság a célponttól</h1>
-  <h1>Cél: <strong>47.705664, 19.160148</strong></h1>
   <div id="result">Helyzet lekérése...</div>
 
   <script>
-    const targetLat = 47.705664;
-    const targetLon = 19.160148;
+    const targetLat = 47.712368;
+    const targetLon = 19.157223;
 
     function getDistanceFromLatLonInMeters(lat1, lon1, lat2, lon2) {
       const R = 6371000; // Föld sugara méterben
@@ -52,9 +51,9 @@
             Saját helyzeted: ${lat.toFixed(6)}, ${lon.toFixed(6)}<br>
             Pontosság: ±${acc.toFixed(1)} méter<br>
             <h1>Távolság a célponttól: ${distance.toFixed(2)} méter</h1><br>
-            ${distance <= 20
-              ? '<span style="color:green">✅ 20 méteren belül vagy.</span>'
-              : '<span style="color:red">❌ Több mint 20 méterre vagy.</span>'}
+            ${distance <= 50
+              ? '<span style="color:green">✅ 50 méteren belül vagy!</span><br/><img src="kepek/08_kincs_v2.jpg" style="max-width: 800px;" />'
+              : '<span style="color:red">❌ Több mint 50 méterre vagy!</span>'}
           `;
         },
         error => {
